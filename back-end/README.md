@@ -2,7 +2,7 @@
 Run Server: 
 python manage.py runserver
 
-JWT Task:
+
 
 Weather Details:
 Method: POST
