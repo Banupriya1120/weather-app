@@ -38,7 +38,7 @@ export default function AutocompleteSearch() {
             <Autocomplete
                 className="mb-3"
                 aria-describedby="basic-addon2"
-                apiKey={'AIzaSyA5GFCOua6Q-8YraKCBjdCHVK63nrZi92s'}
+                apiKey={'APIKEY'}
                 style={{ width: "50%" }}
                 placeholder="Enter city name"
                 onPlaceSelected={(place) => {
@@ -51,11 +51,11 @@ export default function AutocompleteSearch() {
           />
 
 
-            <div className="weather_section">
+        <div className="weather_section">
             <p><b>Location:</b> {weatherData.city}</p>
-            <p><b>Temp:</b> {weatherData.temp}</p>
+            <p><b>Temp:</b> {weatherData.temp} {weatherData.temp ? "°C" : null}</p>
             <p><b>Description:</b> {weatherData.description}</p>
-            <p><b>Humidity:</b> {weatherData.humidity}</p>
+            <p><b>Humidity:</b> {weatherData.humidity} {weatherData.humidity ? "%" : null }</p>
             </div>
             <small><span style={{color: "red"}}>Note:</span> search locations restricted to indian cities due to cost of places API</small>
         </div>
